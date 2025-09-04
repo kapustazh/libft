@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/03 17:16:24 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/04 12:47:04 by atvii            ###   ########.fr       */
+/*   Created: 2025/09/03 22:12:49 by atvii             #+#    #+#             */
+/*   Updated: 2025/09/04 20:06:20 by atvii            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while ((s1[i] || s2[i]) && (i < n))
 	{
-		if (str[i] == (char)c)
-			return ((char *)&str[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&str[i]);
-	return (NULL);
+	return (0);
 }
+
+// int	main(void)
+// {
+// 	char	s1[] = "123a786";
+// 	char	s2[] = "1234asd";
+
+// 	printf("%d\n", strncmp(s1, s2, 7));
+// 	printf("%d\n", ft_strncmp(s1, s2, 7));
+// 	return (0);
+// }

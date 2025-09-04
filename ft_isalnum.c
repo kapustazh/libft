@@ -6,15 +6,15 @@
 /*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 10:04:30 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/02 10:12:40 by atvii            ###   ########.fr       */
+/*   Updated: 2025/09/03 22:16:05 by atvii            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int argument)
+int	ft_isalnum(int arg)
 {
-	return ((argument >= 'a' && argument <= 'z')
-		|| (argument >= 'A' && argument <= 'Z')
-		|| (argument >= '0' && argument <= '9'));
+	return ((arg >= 'a' && arg <= 'z')
+		|| (arg >= 'A' && arg <= 'Z')
+		|| (arg >= '0' && arg <= '9'));
 }

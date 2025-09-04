@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/03 17:16:24 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/04 12:47:04 by atvii            ###   ########.fr       */
+/*   Created: 2025/09/04 15:14:32 by atvii             #+#    #+#             */
+/*   Updated: 2025/09/04 15:36:51 by atvii            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strnstr(const char *haystick, const char *needle, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
+	if (!*needle)
+		return ((char *)haystick);
 	i = 0;
-	while (str[i])
+	while (haystick[i] && i < len)
 	{
-		if (str[i] == (char)c)
-			return ((char *)&str[i]);
+		j = 0;
+		while (needle[j] && i + j < len && haystick[i + j] == needle[j])
+			j++;
+		if (needle[j] == '\0')
+			return ((char *)haystick + i);
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&str[i]);
-	return (NULL);
+	return ('\0');
 }
