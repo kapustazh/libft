@@ -6,7 +6,7 @@
 /*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 22:01:58 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/04 22:04:44 by atvii            ###   ########.fr       */
+/*   Updated: 2025/09/05 00:38:36 by atvii            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,11 @@ static int	word_counter(const char *str, char c)
 		{
 			word++;
 			while (str[i] && str[i] != c)
+			{
 				i++;
+				if (str[i] == '\0')
+					return (word);
+			}
 		}
 		else
 			i++;
@@ -55,6 +59,17 @@ static char	*word_split(const char *str, char c)
 	return (word);
 }
 
+static void	*free_words(char **words, size_t j)
+{
+	while (j > 0)
+	{
+		j--;
+		free(words[j]);
+	}
+	free(words);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -72,7 +87,7 @@ char	**ft_split(char const *s, char c)
 		{
 			words[j] = word_split(&s[i], c);
 			if (!words[j])
-				return (NULL);
+				return (free_words(words, j));
 			while (s[i] && s[i] != c)
 				i++;
 			j++;
