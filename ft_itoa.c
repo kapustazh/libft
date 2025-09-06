@@ -6,7 +6,7 @@
 /*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 22:08:01 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/04 22:38:25 by atvii            ###   ########.fr       */
+/*   Updated: 2025/09/07 00:02:32 by atvii            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	size_checker(long num)
 	return (count);
 }
 
-char	*fill_digits(char *digit, long num)
+static char	*fill_digits(char *digit, long num)
 {
 	int	len;
 	int	i;
