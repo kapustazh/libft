@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mnestere <mnestere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/04 15:14:32 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/04 15:36:51 by atvii            ###   ########.fr       */
+/*   Created: 2025/10/07 15:47:31 by mnestere          #+#    #+#             */
+/*   Updated: 2025/10/07 15:47:33 by mnestere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strnstr(const char *haystick, const char *needle, size_t len)
 			return ((char *)haystick + i);
 		i++;
 	}
-	return ('\0');
+	return (NULL);
 }

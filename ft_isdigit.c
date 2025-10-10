@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atvii <atvii@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mnestere <mnestere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 10:04:38 by atvii             #+#    #+#             */
-/*   Updated: 2025/09/02 10:17:59 by atvii            ###   ########.fr       */
+/*   Created: 2025/10/07 15:51:16 by mnestere          #+#    #+#             */
+/*   Updated: 2025/10/10 10:21:21 by mnestere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isdigit(int arg)
 {
-	return (arg >= '0' && arg <= '9');
+	return (arg >= 48 && arg <= 57);
 }
