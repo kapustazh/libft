@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnestere <mnestere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/02 23:58:02 by atvii             #+#    #+#             */
-/*   Updated: 2025/10/07 15:22:38 by mnestere         ###   ########.fr       */
+/*   Created: 2025/10/13 12:35:14 by mnestere          #+#    #+#             */
+/*   Updated: 2025/10/13 12:35:15 by mnestere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,8 @@ void	ft_bzero(void *ptr, size_t num)
 
 // int	main(void)
 // {
-// 	char	str[50];
-
-// 	strcpy(str, "Hallo guys, how are you?");
-// 	puts(str);
-// 	ft_bzero(str, 7);
-// 	puts(str);
-// 	return (0);
+// 	char	str[] = "Hallo guys, how are you?";
+// 	ft_bzero(str, 24);
+// 	printf("%s\n", str);
+// 	return (0); 
 // }

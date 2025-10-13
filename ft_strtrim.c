@@ -6,7 +6,7 @@
 /*   By: mnestere <mnestere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:47:17 by mnestere          #+#    #+#             */
-/*   Updated: 2025/10/07 15:47:20 by mnestere         ###   ########.fr       */
+/*   Updated: 2025/10/13 12:59:13 by mnestere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ static int	is_sep(char c, char const *set)
 	return (0);
 }
 
+/**
+ * @brief Trims specified characters from the beginning and end of a string.
+ * @param s1 The string to be trimmed.
+ * @param set The set of characters to trim.
+ * @return The newly allocated trimmed string, or NULL if allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;

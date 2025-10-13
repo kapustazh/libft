@@ -6,7 +6,7 @@
 /*   By: mnestere <mnestere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:51:07 by mnestere          #+#    #+#             */
-/*   Updated: 2025/10/07 15:51:09 by mnestere         ###   ########.fr       */
+/*   Updated: 2025/10/13 13:03:26 by mnestere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ static char	*fill_digits(char *digit, long num)
 		digit[0] = '-';
 		num = -num;
 	}
-	digit[len] = '\0';
 	while (num > 0)
 	{
 		digit[i] = num % 10 + '0';
