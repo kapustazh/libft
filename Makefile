@@ -21,11 +21,10 @@ BONUS_OBJ = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(AR) rcs $(NAME) $(OBJ)
-
-bonus: $(OBJ) $(BONUS_OBJ)
+$(NAME): $(OBJ) $(BONUS_OBJ)
 	$(AR) rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+
+bonus: all
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
